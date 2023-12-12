@@ -101,11 +101,11 @@ const Signup = () => {
       const data = new FormData();
       data.append("file", pics);
       data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "dpzk6eef5");
-      fetch("https://api.cloudinary.com/v1_1/dpzk6eef5", {
-        method: "post",
-        body: data,
-      })
+      data.append("cloud_name", "gangasingh");
+      fetch("https://api.cloudinary.com/v1_1/gangasingh/image/upload", {
+          method: "post",
+          body: data,
+        })
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
